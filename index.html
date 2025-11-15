@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>VR405</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -35,47 +35,87 @@
 
 <body>
   <div class="content">
-    <h1>Project Title</h1>
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;margin:24px 0;text-align:center;gap:8px;">
+      <img src="assets/nus_icon.png" alt="NUS Logo" style="display:block;max-width:400px;height:auto;">
+      <h1 style="margin:0;">CDE4301 Innovation & Design Capstone AY25/26</h1>
+      <h2 style="margin:0;">VR405: Wearable Foot Haptic Interface for Terrain Simulation of VR/AR</h2>
+      <h2 style="margin:0;">Interim Report</h2>
+    </div>
+    
 
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
+      <team-member avatar="assets/member1.png" name="Li Zhuolun" department="Electrical Engineering"
+        matric_number="A0258743U"></team-member>
     </div>
 
     <!-- This is a divide from the shoelace library for aesthetic purpose -->
     <sl-divider></sl-divider>
+    
 
+    <div>
+      <p>
+        <h2>Clarification</h2>
+        The content presented in this report is a preliminary draft intended for review and feedback purposes only.
+        It may contain inaccuracies, incomplete information, or sections that are subject to change. For illustrative
+        purposes, some images were produced or enhanced using AI tools.
+      </p>
+    </div>
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
+          <a href="#section-header-1">1. Introduction</a>
           <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
+            <a href="#sub-section-1-header-1">1.1. Design Requirements</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
+            <a href="#sub-section-1-header-2">1.2. Previous Solutions</a>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
+          <a href="#section-header-2">2. Proposed Design</a>
           <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
+            <a href="#sub-section-2-header-1">2.1. System Structure</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
+            <a href="#sub-section-2-header-2">2.2. Control System</a>
           </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-2-header-3">2.3. Technical Evaluation</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-3">3. User Testing</a>
+          <sl-tree-item>
+            <a href="#sub-section-3-header-1">3.1. Experiment 1: Human perception on different pneumatic units</a>
+            <sl-tree-item>
+              <a href="#sub-section-3-1-header-1">3.1.1. Experiment Goals</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-3-1-header-2">3.1.2. Stimulus Configuration</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-3-1-header-3">3.1.3. Experiment Procedure</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-3-1-header-4">3.1.4. Results and Analysis</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-3-header-2">3.2. Future User Testings</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-4">4. Project Management</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-5">5. Conclusion</a>
         </sl-tree-item>
 
         <sl-tree-item>
@@ -86,134 +126,541 @@
     <sl-divider></sl-divider>
 
     <div>
-
-      <!-- This is an example of what a section might look like -->
       <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
+        <h2> 1. Introduction </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
+          Providing full foot haptic feedback remains one of the most significant challenges in
+          achieving complete immersion in virtual and augmented reality systems. The human plantar
+          surface is irregular and complex, making it difficult to replicate the sensations of walking
+          on different terrains. Among the anatomical features of the foot, the Medial Longitudinal
+          Arch (MLA) plays a critical role in maintaining balance and perceiving surface irregularities.
+          This project aims to deliver realistic terrain sensation feedback on the MLA while maintaining
+          a comfortable and precise fit to the user’s foot surface.
         </p>
+        <image-component tag="image" source="assets/Fig_1.png"
+          subtitle="Figure 1: The medial longitudinal arch (MLA) of the human foot <br> Picture Source: : https://diabeticshoe.in/blogs/foot-condition-research-center/a-guide-to-understanding-foot-arches?srsltid=AfmBOopV3ge0wRDdKw2fDBH-wbxRVjRnDJ0zOQjfX_rENKDzziy9yCpm"  width="400px" height="auto">
+        </image-component>
       </div>
 
       <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
+        <h3>1.1 Design Requirements</h3>
         <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
+          The design of a wearable foot haptic interface must satisfy several key requirements to
+          ensure realism and comfort. The device needs to be <b>soft and flexible</b> to conform to
+          the natural movement of the foot. It must also provide <b>force feedback</b> to simulate
+          the feeling of pressure underfoot and <b>vibration</b> to reproduce textures such as rough
+          or smooth surfaces. Furthermore, it should <b>support natural walking gestures</b> in VR
+          or AR environments to avoid disrupting user mobility and immersion.
         </p>
+        <image-component tag="image" source="assets/Fig_2.png"
+          subtitle="Figure 2: Foot sole area measurement <br> Picture Source: https://pubmed.ncbi.nlm.nih.gov/29873612/"  width="400px" height="auto">
+        </image-component>
       </div>
 
       <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
+        <h3>1.2 Previous Solutions</h3>
         <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
+          Several prior works have explored haptic feedback systems for walking simulation in virtual
+          environments. For instance, RealWalk (Son et al., 2018) presented a system that use
+          magnetorheological (MR) fluid actuators under the soles to change resistance and create
+          the feeling of walking on different surfaces. As the user steps, sensors and magnetic fields
+          adjust the fluid’s viscosity to mimic soft or firm ground in real time. Another approach,
+          PropelWalker (Ke et al., 2023), introduced a leg-based wearable device with propeller-based
+          force feedback for simulating walking in fluids. On each leg, the propeller is equipped with
+          two ducted fans (one for upward thrust and one for downward) that generate airflow-based force
+          feedback to simulate the sensation of walking through different fluids like water, mud or sand in VR.
+          RealWalk provides high-fidelity ground contact sensations that closely mimic real surface textures,
+          while PropelWalker offers strong kinesthetic force feedback across the legs, enhancing the sense of
+          motion and resistance. Despite their different mechanisms, both share similar limitations—the setups
+          are heavy, complex, and power-demanding, which can reduce comfort and practicality for extended or
+          portable VR use.
         </p>
+        <image-component tag="image" source="assets/Fig_3.png"
+          subtitle="Figure 3: RealWalk (Son et al., 2018) "  width="400px" height="auto">
+        </image-component>
+        <br><br>
+        <image-component tag="image" source="assets/Fig_4.png"
+          subtitle="Figure 4: PropelWalker (Ke et al., 2023)"  width="400px" height="auto">
+        </image-component>
+        <br />
+        <br />
 
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
+        <p>
+          Figure 5 (Chang et al., 2023) shows a floor-based mechanical platform that changes preload
+          and surface stiffness to simulate different ground hardness levels. It offers strong,
+          precise force feedback and accurately reproduces terrain stiffness by adjusting the resistance
+          against body weight. Figure 6 (Son et al., 2018) presents a stepping haptic device that recreates
+          terrain variation through motion cues and variable-stiffness curved origami panels. This setup
+          enhances immersion by matching body motion with surface change. However, these two structures
+          are large or heavy, restricting natural walking or free movement, fine foot contact and texture
+          feedback, limiting the realism of detailed ground sensations.
+        </p>
+        <image-component tag="image" source="assets/Fig_5.png"
+          subtitle="Figure 5: Floor-based Mechanical Platform (Chang et al., 2023)"  width="400px" height="auto">
+        </image-component>
+        <br><br>
+        <image-component tag="image" source="assets/Fig_6.png"
+          subtitle="Figure 6: Stepping Haptic Device (Son et al., 2018)"  width="400px" height="auto">
+        </image-component>
+
       </div>
     </div>
-
 
     <br />
     <br />
     <sl-divider></sl-divider>
     <div>
       <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
+        <h2>2. Proposed Design</h2>
         <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
+          In response to these gaps, the proposed wearable foot haptic shoe device fulfills all previously
+          stated requirements. The system combines soft material layers with pneumatic actuation to deliver
+          both force and texture sensations. This allows users to experience localized, controllable feedback
+          under the foot arch while maintaining comfort and freedom of movement.
         </p>
+        <image-component tag="image" source="assets/Fig_7.png"
+          subtitle="Figure 7: Proposed Wearable Foot Haptic Shoe Device "  width="800px" height="auto">
+        </image-component>
+
       </div>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
+        <h3>2.1. System structure</h3>
         <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
+          Here is the structure of system. At the bottom shows the silicone support module,
+          which provides localized pneumatic actuation to simulate pressure on the skin.
+          Above it, we integrate a haptic feedback layer, where multiple air chambers independently
+          inflate and deflate to recreate sensations such as step motion, terrain contact, or vibration
+          cues. The entire unit is lightweight, flexible, and can conform to different body surfaces making
+          it suitable for wearable or foot-based haptic interaction. This structure allows both precise
+          control of tactile feedback and scalable integration for immersive VR experiences.
+
+          <image-component tag="image" source="assets/Fig_8.png"
+          subtitle="Figure 8: System structure"  width="300px" height="auto">
+          </image-component>
+        </p>
+          
+        <p>
+          For the silicone module, we fabricated it using two layers: the top layer made of <b>Ecoflex 00-30</b>
+          for softness, and the bottom layer made of <b>Dragon Skin 00-20</b> for structural support.
+          After cooling down under 25 degree Celsius overnight, two parts are demolded seperately
+          The two layers are then bonded with air tube inside using <b>Sil-Poxy</b> glue, forming a single
+          flexible and airtight chamber. For the silicone support module, <b>Dragon Skin 00-20</b> was used
+          to make a single, strong base. The silicone was poured into a support 3D-printing mold and
+          left to cure at about 25 °C overnight. After curing, the part was removed as one solid piece,
+          with no extra glue steps. This hybrid structure allows the device to deliver both
+          pressure-based feedback and surface conformity, ensuring comfort and realism during walking
+          or standing in VR environments.
+        </p>
+        <image-component tag="image" source="assets/Fig_9.png"
+          subtitle="Figure 9: Fabrication Process"  width="800px" height="auto">
+          </image-component>
+
+          <p>
+          The size of an air chamber is <b>9 mm of diameter</b> and 0.5 mm of thickness. The choice of chamber diameter aligns
+          with the plantar mechanoreceptor receptive-field sizes reported in FeetThrough (Ushiyama & Lopes, 2023).
+          The electrode diameter of 8 mm in FeetThrough was chosen to match the receptive-field size
+          of plantar mechanoreceptors (SA I and FA I) on the sole. Larger diameters distribute current
+          or pressure more evenly and prevent local pain or overstimulation, a known risk with smaller
+          electrodes. Applying this reasoning to pneumatic chambers, a ≈ 9 mm chamber diameter similarly
+          balances stimulus localization and comfort—large enough to evoke distinct tactile cues at
+          the arch without sharp pressure points, yet small enough to reach discrimination thresholds
+          near the 7–8 mm range reported by Solomonow et al. (1977). This size optimizes the trade-off between
+          spatial resolution and user comfort for effective foot haptic feedback.
         </p>
 
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
       </div>
 
       <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
+        <h3>2.2. Control System</h3>
         <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
+          <image-component tag="image" source="assets/Fig_10.png"
+          subtitle="Figure 10: Control System Diagram"  width="800px" height="auto">
+          </image-component>
+          <br>
+          The pneumatic control system is organized into multiple channels, each responsible for
+          driving one air chamber. Every channel includes a small pump and two solenoid valves
+          —an <b>in-valve</b> for inflating the chamber and an <b>out-valve</b> for releasing air—powered by
+          separate 24 V and 12 V DC supplies. These components are switched through <b>MOSFETs</b>, which
+          allow the <b>Arduino Mega 2560 MCU</b> to control each valve and pump using PWM signals. An <b>air pressure sensor</b>
+          connected to the MCU provides continuous feedback, so the system can adjust
+          pressure sensor connected to the MCU provides continuous feedback, so the system can adjust
+          the airflow and maintain the desired pressure inside each chamber. This setup allows each
+          channel to inflate or deflate independently, supporting precise and responsive pneumatic
+          feedback across the device.
         </p>
+        
+        <br>
+        <p>
+          The pneumatic control system operates in three distinct modes to deliver various haptic sensations:
+          <b>REST</b>, <b>STATIC FORCE</b>, and <b>VIBRATION</b>. In REST mode, both the intake and exhaust valves
+          are closed, maintaining the chamber at ambient pressure without any actuation. STATIC FORCE mode
+          involves opening the intake valve to inflate the chamber, generating a steady force sensation
+          under the foot arch, while keeping the exhaust valve closed to hold the pressure. VIBRATION mode
+          alternates intake valves between ON and OFF rapidly, creating dynamic pressure changes
+          that produce vibration sensations. This mode allows for simulating textures and surface irregularities.
+          By switching between these modes, the system can effectively replicate a range of tactile experiences,
+          from firm ground contact to fine surface textures.
+        </p>
+        <image-component tag="image" source="assets/Fig_11.png"
+          subtitle="Figure 11: Pneumatic Control System (REST)"  width="800px" height="auto">
+          </image-component>
 
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
+        <image-component tag="image" source="assets/Fig_12.png"
+          subtitle="Figure 12: Pneumatic Control System (STATIC FORCE)"  width="800px" height="auto">
+          </image-component>
+
+        <image-component tag="image" source="assets/Fig_13.png"
+          subtitle="Figure 13: Pneumatic Control System (VIBRATION)"  width="800px" height="auto">
+          </image-component>
+          <br><br>
+
+        <table-component subtitle="Table: Operation Modes of the Pneumatic Control System">
           <div id="table-1"></div>
         </table-component>
       </div>
+
+      <div id="sub-section-2-header-3">
+        <h3>2.3. Technical Evaluation</h3>
+        <p>
+          The technical evaluation aims to characterize the performance of the pneumatic foot haptic
+          device in delivering force and vibration feedback. Key metrics include the maximum force
+          output, response time, and frequency range of vibration stimuli.  Vibration frequency
+          is evaluated by applying rapid inflation-deflation cycles and measuring the resulting
+          oscillation air pressure.
+          <br>
+
+        <image-component tag="image" source="assets/Fig_14.png"
+          subtitle="Figure 14: Technical Evaluation Setup"  width="400px" height="auto">
+          </image-component>
+          <br>
+
+          Figure 14 shows the testing mechanism. An inflatable air chamber is fixed beneath a constraint plate,
+          with the applied pressure monitored by a force sensor. This setup enables precise measurement of the output force
+          under different input pressures. Figure 15 and Figure 16 are the fabricated test units, including 3D-printed fixtures,
+          silicone chambers, and the assembled testing platform. These components together verify the system’s mechanical response
+          and consistency under controlled conditions.
+
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <img src="assets/Fig_15.png" alt="" style="width:45%;">
+            <img src="assets/Fig_16.png" alt="" style="width:45%;">
+
+          </div>
+          <p style="margin-top: 0.5rem; font-size: 1em; font-style: italic; text-align: center;">
+            Figure 15-16: Technical Evaluation Setup (Left: Force sensor, Right: Air pressure sensor)
+          </p>
+          <br>
+          <p>
+            By systematically varying the input pressure and measuring the resulting force output,
+            the relationship between actuation pressure and generated force was characterized.
+            Force sensor beneath the constraint plate recorded the normal force while air pressure
+            inside the chamber was incrementally increased from 10 kPa to 70 kPa in 10 kPa steps.
+            Each pressure level was maintained for several seconds to allow the system to stabilize,
+            and multiple measurements were taken to ensure repeatability and account for material
+            compliance variations.
+          </p>
+          <image-component tag="image" source="assets/Fig_17.png"
+          subtitle="Figure 17: Technical Evaluation Results <br> (a):Relationship Between Air Pressure and Output Force <br> (b): Peak air pressure across different frequencies"  width="800px" height="auto">
+          </image-component>
+
+          <image-component tag="image" source="assets/Fig_18.png"
+          subtitle="Figure 18: Technical Evaluation Results - Static force characterization under different conditions <br> (10kPa/30kPa/50kPa/70kPa)"  width="850px" height="auto">
+          </image-component>
+          <p>
+            Figure (a) characterizes the relationship between <b>actuation pressure and output force</b>
+            of the pneumatic module. As the actuation pressure increases from 10 kPa to 70 kPa,
+            the measured force does not grow linearly but follows a clear quadratic trend, which is captured by the fitted polynomial
+            <b>f(x) = 1.33 &times; 10<sup>&minus;3</sup>x<sup>2</sup> &minus; 9.48 &times; 10<sup>&minus;5</sup>x &minus; 0.138</b>.
+            This curvature indicates that the mechanical sensitivity of the chamber (dF/dP) becomes larger at higher pressures:
+            small changes in pressure near 60–70 kPa produce noticeably larger changes in normal force than the same pressure
+            change around 10–20 kPa. The time-domain traces at 10, 30, 50 and 70 kPa on Figure 18 further show that the chamber generates
+            stable plateau forces after inflation, with the peak force ranging from approximately 0.05 N at 10 kPa to about 6 N at 70 kPa.
+            The rise time is on the order of 1 s, after which the force remains relatively constant with only a slow decay,
+            indicating that leakage and material relaxation are limited over the time scale of typical haptic events.
+            Taken together, these results demonstrate that the module can provide a predictable and repeatable mapping
+            from commanded pressure to under-foot force, which is essential for reliable haptic rendering and later calibration.
+            <br><br>
+            Figure (b) evaluates the dynamic vibration capability of the same module by driving it with a periodic pressure
+            signal and measuring <b>peak and trough pressures</b> as a function of frequency. At low driving frequencies (10–30 Hz),
+            the difference between peak and trough pressure is large, meaning that the chamber volume has enough time to fully inflate
+            and deflate within each cycle. This produces high-amplitude pressure oscillations and therefore strong, clearly felt tactile cues,
+            suitable for rendering pronounced bumps or impacts. As the frequency increases beyond about 40 Hz, the amplitude of
+            the modulation gradually decreases and then stabilizes; the peak pressure slowly drops while the trough pressure rises,
+            narrowing the gap between them. This behavior reflects the combined limits of the pump, valves, and air flow: at high
+            frequencies the pneumatic system cannot move enough air per cycle to reach the same pressure swing. Nevertheless,
+            a usable modulation depth is maintained up to 100 Hz, which defines a practical operating band of 10–100 Hz. Within
+            this range, low frequencies can be used for strong, coarse events, while higher frequencies support finer texture‐like vibrations,
+            all while keeping the absolute pressure within a safe and comfortable envelope for the foot.
+
+        </p>
+      </div>
     </div>
 
-    <!-- This is an example of how you can use the references component to create references -->
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-3">
+        <h2>3. User Testing</h2>
+        <p>
+          To assess the effectiveness of the foot haptic device in simulating terrain sensations,
+          user testing is conducted. The study evaluates how well participants can perceive different
+          ground textures and hardness levels through the pneumatic feedback while walking or standing.
+        </p>
+      </div>
+
+      <div id="sub-section-3-header-1">
+        <h3>3.1. Experiment 1: Human perception on different pneumatic units</h3>
+
+        <div id="sub-section-3-1-header-1">
+          <h4>3.1.1. Experiment Goals</h4>
+
+          <p>
+            The first experiment aims to investigate how well different pneumatic units can be perceived at the MLA.
+            The user study focuses on identifying the tactile <b>two-point discrimination threshold</b>, which indicates
+            how closely two pneumatic stimuli can be placed while still being felt as separate sensations. To evaluate
+            directional sensitivity, the pneumatic units are activated along <b>horizontal, vertical, and diagonal</b>
+            orientations across the arch region. By examining perception across these directions, the experiment seeks
+            to determine the <b>spatial resolution limits</b> of pneumatic feedback under the foot and to understand
+            which chamber placements are most distinguishable for haptic rendering in future designs.
+          </p>
+          
+          <image-component tag="image" source="assets/Fig_19.png"
+          subtitle="Figure 19: Foot-size position calibration"  width="300px" height="auto">
+          </image-component>
+
+          <p>
+            
+          </p>
+        </div>
+
+        <div id="sub-section-3-1-header-2">
+          <h4>3.1.2. Stimulus Configuration</h4>
+          <p>
+            To select an appropriate operating pressure for the pneumatic chambers, both perceptibility
+            and comfort were considered. Pressures below <b>40 kPa</b> produced sensations that were barely
+            noticeable, while pressures above <b>60 kPa</b> often caused discomfort during inflation.
+            Based on these observations and findings from prior studies indicating that two-point discrimination
+            thresholds are relatively independent of applied force(Vriens & van der Glas, 2002), <b>50 kPa</b> was chosen as the working
+            pressure. This level provides clear and safe force feedback and remains within the linear
+            deformation range of the silicone module, ensuring stable and repeatable actuation.
+            <br><br>
+            A <b>5 × 5 stimulation grid</b> was also adopted to provide full spatial coverage of the MLA.
+            This layout allows the pneumatic system to deliver localized pressure cues across different
+            regions of the arch, making it possible to examine how sensitivity varies across positions.
+            The grid structure further supports the identification of optimal chamber placements for future
+            design refinement, enabling more precise and efficient under-foot haptic feedback.
+          </p>
+        </div>
+
+        <div id="sub-section-3-1-header-3">
+          <h4>3.1.3. Experiment Procedure</h4>
+          
+          <p>
+            The first experiment assessed tactile perception thresholds at the MLA.
+            Stimulation was applied in <b>horizontal</b>, <b>vertical</b>, and <b>diagonal</b> directions
+            to determine spatial resolution limits.
+          </p>
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <img src="assets/Fig_20.png"  style="width:200px;">
+            <img src="assets/Fig_21.png"  style="width:200px;">
+            <img src="assets/Fig_22.png"  style="width:200px;">
+          </div>
+          <p style="margin-top: 0.5rem; font-size: 1em; font-style: italic; text-align: center;">
+            Figure 20-22: Stimulation Directions (Horizontal, Vertical, Diagonal)
+          </p>
+
+          <br>
+          
+          Experiment 1 followed a structured procedure beginning with an initial <b>calibration</b> phase to ensure
+          that each participant could clearly perceive the pneumatic stimuli. After calibration, participants completed
+          a series of <b>two-point discrimination (TPD) trials</b>, presented in three stimulus directions
+          <b>horizontal</b>, <b>vertical</b>, and <b>diagonal</b>. Each direction included approximately <b>10–15 test trials</b>,
+          resulting in a total session length of around two hours per participant. To maintain comfort and prevent fatigue,
+          <b>rest periods</b> were provided between trial blocks. All pneumatic stimuli use air pressure
+          of <b>50 kPa</b>. During each trial, participants reported whether the perceived sensation corresponded
+          to <b>one-point</b> or <b>two-point</b> stimulation, enabling assessment of spatial discrimination performance across the arch region.
+          <br><br>
+
+
+          <image-component tag="image" source="assets/Fig_23.jpg"
+          subtitle="Figure 23: Experiment Procedure"  width="400px" height="auto">
+          </image-component>
+
+          <image-component tag="image" source="assets/Fig_24.jpg"
+          subtitle="Figure 24: Experiment Setup"  width="400px" height="auto">
+          </image-component>
+
+          
+          <p>
+            
+          </p>
+        </div>
+
+        <div id="sub-section-3-1-header-4">
+          <h4>3.1.4. Results and Analysis</h4>
+        
+
+          <p>
+            The two-point discrimination data were analyzed using a <b>1-up-2-down staircase method</b>,
+            which adjusts the stimulus distance based on participants’ responses to identify the point
+            at which two stimuli can be reliably distinguished. Each trial sequence continued until
+            <b>five reversals</b> were obtained, indicating consistent changes in perception.
+            To estimate the <b>Just Noticeable Distance (JND)</b>, the <b>last three reversal points</b>
+            from each sequence were averaged, providing a stable threshold value for that direction.
+            This procedure was repeated across all participants and stimulus orientations, resulting
+            in <b>24 data sets</b> in total. An example trial is shown in the accompanying plot,
+            where the blue line represents the changing stimulus distance, the orange markers denote
+            reversal points, and the dashed line indicates the final computed JND. Together,
+            these measures offer a quantitative assessment of the arch region’s <b>spatial resolution</b>
+            under pneumatic stimulation.
+            <br><br>
+            In this experiment, a 1-up-2-down staircase method was used to estimate the discrimination
+            threshold. For this method, the distance between the two pneumatic units becomes smaller
+            after two consecutive correct responses and larger after a single incorrect response.
+            A reversal occurs whenever the direction of the staircase changes, for example from
+            decreasing distance to increasing distance, or vice versa. Early reversals are often
+            influenced by initial guesses and adaptation, so only the last three reversals are used
+            to compute the final threshold, which corresponds closely to the JND.
+            Averaging these later reversal distances gives a stable
+            estimate of the minimum spacing at which two points can still be perceived as separate
+            stimuli at the foot arch.
+          </p>
+          <image-component tag="image" source="assets/Fig_25.png"
+          subtitle="Figure 25: Experiment Results (LEFT FOOT HORIZONTAL THIRD ROW)"  width="800px" height="auto">
+          </image-component>
+        </div>
+
+      </div>
+
+      <div id="sub-section-3-header-2">
+        <h3>3.2. Future User Testings</h3>
+        <p>
+        Experiment 2 is planned to investigate how pneumatic actuation can represent different terrain qualities
+        such as <b>texture</b>, <b>roughness</b>, <b>flatness</b>, and <b>stiffness</b>. This study will analyze how the
+        module responds across a range of <b>driving frequencies</b> and <b>actuation modes</b>, allowing characteristic
+        vibration patterns to be identified for each terrain type. These measurements will be compared under different
+        loads and surface conditions to determine the most reliable cues for recognizing material properties.
+        Vibration is particularly effective for conveying roughness, because irregular surfaces naturally generate rapid,
+        high-frequency micro-impacts during foot contact, and similar sensations can be recreated by modulating pneumatic
+        pressure at higher frequencies. The results of this experiment will help refine terrain classification and improve
+        the fidelity of haptic feedback in future applications.
+
+        </p>
+        <image-component tag="image" source="assets/Fig_26.png"
+          subtitle="Figure 26: Microscopic smooth and rough surface"  width="600px" height="auto">
+          </image-component>
+          <br><br>
+          <p>
+            Experiment 3 evaluates how well our haptic system recreates natural textures in VR.
+            Different scenes will be simulated such as sand, stone, and wave surfaces using pneumatic
+            actuation patterns mapped to each terrain type. Participants experienced these textures under three conditions:<br>
+            (1) <b>Visual only:</b> Viewing the VR scene without haptic feedback.<br>
+            (2) <b>Haptic only:</b> Feeling the pneumatic feedback without visual cues.<br>
+            (3) <b>Combined:</b> Experiencing both visual and haptic stimuli together.<br>
+            After each trial, participants rated realism, presence, and comfort using Likert-scale questionnaires.
+            The goal is to verify whether adding tactile feedback enhances immersion and realism beyond visual cues alone,
+            and to identify which surface parameters best replicate real-world sensations.
+
+          </p>
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <img src="assets/Fig_27.png"  style="width:200px;">
+            <img src="assets/Fig_28.png"  style="width:200px;">
+            <img src="assets/Fig_29.png"  style="width:200px;">
+          </div>
+          <p style="margin-top: 0.5rem; font-size: 1em; font-style: italic; text-align: center;">
+            Figure 27-29: Simulation scenes (Beach, Grass, Gravel)
+          </p>
+
+        <p>
+          
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-4">
+        <h2>4. Project Management</h2>
+        <image-component tag="image" source="assets/Fig_30.png"
+          subtitle="Figure 30: Project Management Timeline"  width="800px" height="auto">
+          </image-component>
+        <p>
+          For next semester, the project is divided into three experimental phases, followed by a final
+          development stage. Experiment 1 (Weeks 0–3) covers early planning, system design,
+          pilot testing, data collection, and initial refinement. Experiment 2 (Weeks 4–7) repeats this
+          workflow and adds VR scene building to support terrain-related tests. Experiment 3 (Weeks 8–11)
+          continues with the same structure to confirm results and explore more complex haptic behaviours.
+          The final stage (Weeks 11–15) focuses on analysing all results, improving the system, fabricating
+          the prototype, and preparing the final presentation. This schedule supports a clear and organised
+          progression from planning to final delivery.
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-5">
+        <h2>5. Conclusion</h2>
+        <p>
+          To conclude, our system successfully delivers <b>haptic feedback</b> to the foot arch, enhancing
+          the sense of ground interaction in virtual environments. It can enable <b>immersive walking
+          experiences</b> in both VR and AR by synchronizing tactile sensations with visual motion cues.
+          Beyond entertainment, the technology holds strong potential for <b>rehabilitation, balance training,
+          and interactive design</b>, where accurate foot feedback can assist recovery or improve user engagement.
+          <br><br>
+          As a next step, the plan is to extend the system toward terrain recognition and full-body VR
+          presence studies, aiming to create more natural and adaptive virtual locomotion experiences.
+
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+
+
     <div id="references" class="references">
       <sl-divider></sl-divider>
       <h2>References</h2>
       <ul>
         <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
+          Chang, W., Je, S., Pahud, M., Sinclair, M., & Bianchi, A. (2023). Rendering perceived terrain stiffness in VR
+          via preload variation against body weight. IEEE Transactions on Haptics, 16(4), 616–621.
         </li>
         <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
+          Ke, P., Cai, S., Gao, H., & Zhu, K. (2023). PropelWalker: A leg-based wearable system with propeller-based
+          force feedback for walking in fluids in VR. IEEE Transactions on Visualization and Computer Graphics, 29(12),
+          5149–5164.
         </li>
         <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+          Son, H., Gil, H., Byeon, S., Kim, S.-Y., & Kim, J. R. (2018). RealWalk: Feeling ground surfaces while walking
+          in virtual reality. ACM.
         </li>
+        <li>
+          Strzalkowski, N. D. J., Triano, J. J., Lam, C. K., Templeton, C. A., & Bent, L. R. (2015). Thresholds of skin
+          sensitivity are partially influenced by mechanical properties of the skin on the foot sole. Physiological
+          Reports, 3(6), e12425.
+        </li>
+        <li>
+          Vriens, J. P. M., & van der Glas, H. W. (2002). The relationship of facial two-point discrimination to applied
+          force under clinical test conditions. Plastic and Reconstructive Surgery, 109(3), 943–952.
+        </li>
+        <li>
+          Zhang, Z., Xu, Z., Emu, L., Wei, P., Chen, S., Zhai, Z., Kong, L., Wang, Y., & Jiang, H. (2023). Active
+          mechanical haptics with high-fidelity perceptions for immersive virtual reality. Nature Machine Intelligence,          5, 643–655.
+        </li>
+        <li>
+          Smith, A. (1776). An inquiry into the nature and causes of the wealth of nations. W. Strahan and T. Cadell.
+        </li>
+        <li>
+          Ushiyama, K., & Lopes, P. (2023). FeetThrough: Electrotactile foot interface that preserves real-world
+          sensations. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ’23),
+          1–11. https://doi.org/10.1145/3586183.3606808
+        </li>
+        
       </ul>
     </div>
   </div>

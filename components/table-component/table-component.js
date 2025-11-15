@@ -1,11 +1,9 @@
 new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["Mode", "Intake Valve", "Exahust Valve"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["Rest", "OFF", "OFF"],
+    ["Static Force", "ON", "OFF"],
+    ["Vibration", "ON <--> OFF", "ON"],
   ],
 }).render(document.getElementById("table-1"));
 
