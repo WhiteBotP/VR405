@@ -39,7 +39,7 @@
       <img src="assets/nus_icon.png" alt="NUS Logo" style="display:block;max-width:400px;height:auto;">
       <h1 style="margin:0;">CDE4301 Innovation & Design Capstone AY25/26</h1>
       <h2 style="margin:0;">VR405: Wearable Foot Haptic Interface for Terrain Simulation of VR/AR</h2>
-      <h2 style="margin:0;">Interim Report</h2>
+      <h2 style="margin:0;">Final Report</h2>
     </div>
     
 
@@ -881,9 +881,40 @@
           </li>
         </ul>
         <p style="margin-bottom: 0;">
-          <b>Design Application:</b> These findings provide the empirical thresholds required to
-          program the VR terrain mapping, ensuring that the transition from "Sand" to "Stone"
-          is perceived as a distinct change in physical properties.
+          <p>
+        The perceptual data reveals distinct psychophysical patterns that guide the mapping of
+        physical pneumatic stimuli to virtual surfaces. By correlating our results with established
+        research on plantar vibration, we can define how frequency and force influence the realism of
+        different terrains.
+      </p>
+      <ul>
+        <li>
+          <b>Low-Frequency and Stiffness (10–30 Hz):</b> Our evaluation shows that low-frequency
+          stimuli are perceived as <b>rough and hard</b>. This aligns with findings that low-frequency
+          forces are primarily sensed by <b>Slow-Adapting (SA) receptors</b> and Golgi organs, which
+          contribute to the sensation of local pressure and surface resistance. In VR, these parameters
+          are mapped to high-friction or solid surfaces like <b>Gravel</b> or <b>Rocky Terrain</b>.
+        </li>
+        <li>
+          <b>High-Frequency and Compliance (80–100 Hz):</b> As the frequency increases, the perception
+          shifts toward <b>smooth and soft</b> characteristics. High-frequency vibrations primarily
+          target <b>Fast-Adapting (FA) type II receptors</b>, which are highly sensitive to vibromechanical
+          stimuli. Research suggests that increased vibration intensity can create a
+          "compliance illusion," making a rigid surface feel more deformable. Thus, high-frequency
+          "hums" are utilized to simulate compliant materials like <b>Sand</b> or <b>Grass</b>.
+        </li>
+        <li>
+          <b>Static Force and Solidity:</b> The positive linear correlation between static load
+          (1 N to 5 N) and perceived stiffness ensures that increased pneumatic intrusion is interpreted
+          as solid ground contact. This allows the system to differentiate between a firm <b>Stone Path</b>
+          and softer underlays.
+        </li>
+        <li>
+          <b>Mapping Strategy:</b> To maximize immersion, <b>Gravel</b> is rendered using low-frequency,
+          high-amplitude bursts to evoke coarse texture, while <b>Sand</b> utilizes high-frequency
+          modulation to simulate the subtle displacement and "softness" of granular materials.
+        </li>
+      </ul>
         </p>
       </div>
     </div>
@@ -1100,6 +1131,14 @@
           Reports, 3(6), e12425.
         </li>
         <li>
+          Ushiyama, K., & Lopes, P. (2023). FeetThrough: Electrotactile foot interface that preserves real-world
+          sensations. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ’23),
+          1–11. https://doi.org/10.1145/3586183.3606808
+        </li>
+        <li>
+          Visell, Y., Giordano, B. L., Millet, G., & Cooperstock, J. R. (2011). Vibration influences haptic perception of surface compliance during walking. <i>PLoS ONE</i>, 6(3), e17697. https://doi.org/10.1371/journal.pone.0017697
+        </li>
+        <li>
           Vriens, J. P. M., & van der Glas, H. W. (2002). The relationship of facial two-point discrimination to applied
           force under clinical test conditions. Plastic and Reconstructive Surgery, 109(3), 943–952.
         </li>
@@ -1109,11 +1148,6 @@
         </li>
         <li>
           Smith, A. (1776). An inquiry into the nature and causes of the wealth of nations. W. Strahan and T. Cadell.
-        </li>
-        <li>
-          Ushiyama, K., & Lopes, P. (2023). FeetThrough: Electrotactile foot interface that preserves real-world
-          sensations. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ’23),
-          1–11. https://doi.org/10.1145/3586183.3606808
         </li>
         <li>
           https://www.straitstimes.com/singapore/new-scdf-training-suits-use-virtual-reality-to-create-immersive-scenarios

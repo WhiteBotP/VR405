@@ -11,9 +11,9 @@ new gridjs.Grid({
 new gridjs.Grid({
   columns: ["Terrain Material", "Mode", "Frequency / Force", "Haptic Rationale"],
   data: [
-    ["Grass", "Vibration", "10 – 30 Hz (Low Amp)", "Mimics the irregular resistance of grass blades."],
-    ["Yoga Mat / Carpet", "Vibration", "40 – 70 Hz (Medium Amp)", "Simulates soft, elastic damping and fine fiber textures."],
-    ["Asphalt", "Vibration", "80 – 100 Hz (High Amp)", "Replicates micro-impacts of a hard, granular surface."],
+    ["Asphalt", "Vibration", "10 – 30 Hz (Low Amp)", "Simulates soft, elastic damping and fine fiber textures."],
+    ["Grass", "Vibration", "40 – 70 Hz (Medium Amp)", "Mimics the irregular resistance of grass blades."],
+    ["Yoga Mat / Carpet", "Vibration", "80 – 100 Hz (High Amp)", "Replicates micro-impacts of a hard, granular surface."],
     ["Gravel (Small Pebbles)", "Static Force", "1 - 2 N (Small Force)", "Uses individual actuators for point intrusion."],
     ["Uneven Rocks", "Static Force", "4 - 5 N (Large Force)", "Simulates large-scale displacement against the MLA."]
   ],
