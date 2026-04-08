@@ -856,29 +856,37 @@
       <div style="background-color: #fff9db; padding: 25px; border-left: 5px solid #fcc419; margin: 30px 0; border-radius: 0 8px 8px 0;">
         <h5 style="margin-top: 0; color: #856404;">Detailed Statistical Interpretation</h5>
         <p>
-          The analysis yielded highly significant results (<b>p < 0.001</b>) across all primary 
-          perceptual categories, rejecting the null hypothesis that stimulus levels have no effect 
-          on user perception.
+          The analysis yielded highly significant results ($p < 0.001$) for most perceptual categories,
+          rejecting the null hypothesis that stimulus levels have no effect on user perception, with
+          the notable exception of Stiffness under static pressure.
         </p>
         <ul style="line-height: 1.7;">
           <li>
-            <b>Static Force Sensitivity:</b> For <b>Stiffness</b> and <b>Flatness</b>, the 
-            Chi-square values (χ²(4))of 42.85 and 56.12 respectively indicate that the 
-            plantar mechanoreceptors are highly sensitive to incremental pressure changes between 
-            1 N and 5 N.
+            <b>Static Force Sensitivity:</b> For <b>Flatness</b> and <b>Roughness</b>,
+            the results indicate that plantar mechanoreceptors are sensitive to incremental pressure
+            changes. However, Stiffness (p = 0.106) did not show a statistically significant trend
+            across the 1–5 N range, suggesting that users may find it difficult to distinguish material
+            hardness solely through varying levels of static force without dynamic cues.
           </li>
           <li>
-            <b>Vibration Frequency Modulation:</b> The <b>Roughness</b> dimension showed the
-            highest Chi-square value (χ²(9) = 92.34), proving that frequency is the
-            dominant driver for texture simulation. The significant drop in scores at higher
-            frequencies (80–100 Hz) suggests a clear perceptual boundary for "coarse" vs. "fine"
-            materials.
-          </li>
-          <li>
-            <b>Consistency:</b> The low p-values across all dimensions confirm that the
-            <b>Arch-Adaptive Base</b> successfully maintained stable contact, allowing users
-            to reliably distinguish between different terrain qualities.
-          </li>
+            <b>Vibration Frequency Modulation:</b> The <b>Flatness</b> and <b>Roughness</b> dimensions 
+            showed the highest Chi-square values (χ² = 177.64 and 144.18 respectively), proving that frequency is 
+            the dominant driver for texture simulation. Piecewise comparisons revealed that the most significant 
+            perceptual shifts occur in the mid-frequency range (40–60 Hz), identifying this as a critical zone 
+            for simulating tactile transitions.
+        </li>
+        <li>
+            <b>Perceptual Boundaries:</b> The significant p-values and subsequent pairwise analysis 
+            for <b>Vibration / Stiffness</b> (χ² = 92.51) indicate that frequency also modulates the perceived 
+            "firmness" of a surface, especially as frequencies approach the 80–90 Hz range, where a distinct change 
+            in stiffness perception was recorded (p = 0.027).
+        </li>
+        <li>
+            <b>System Reliability:</b> The high consistency of these low p-values (excepting static stiffness) 
+            confirms that the <b>Arch-Adaptive Base</b> successfully maintained stable skin-device contact, 
+            allowing users to reliably distinguish between different simulated terrain qualities across a wide range 
+            of mechanical outputs.
+        </li>
         </ul>
         <p style="margin-bottom: 0;">
           <p>
@@ -905,7 +913,7 @@
         </li>
         <li>
           <b>Static Force and Solidity:</b> The positive linear correlation between static load
-          (1 N to 5 N) and perceived stiffness ensures that increased pneumatic intrusion is interpreted
+          (1 N to 5 N) and perceived flatness ensures that increased pneumatic intrusion is interpreted
           as solid ground contact. This allows the system to differentiate between a firm <b>Stone Path</b>
           and softer underlays.
         </li>
