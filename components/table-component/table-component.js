@@ -88,7 +88,7 @@ new gridjs.Grid({
   ],
   resizable: true,
   data: [
-    ["Static Force / Stiffness", "7.33", "4", "< 0.001", "Not Significant (ns)"],
+    ["Static Force / Stiffness", "7.33", "4", "> 0.001", "Not Significant (ns)"],
     ["Static Force / Flatness", "63.227", "4", "< 0.001", "Extremely Sig (***)"],
     ["Vibration / Roughness", "144.181", "9", "< 0.001", "Extremely Sig (***)"],
     ["Vibration / Flatness", "177.640", "9", "< 0.001", "Extremely Sig (***)"],
