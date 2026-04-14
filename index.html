@@ -108,7 +108,7 @@
         <a href="#sub-section-3-header-5">3.5 Design Iteration and Optimization</a>
       </sl-tree-item>
       <sl-tree-item>
-        <a href="#sub-section-2-4-2">3.6 Arch-Adaptive Base Design and Classification</a>
+        <a href="#sub-section-3-header-6">3.6 Arch-Adaptive Base Design and Classification</a>
       </sl-tree-item>
     </sl-tree-item>
 
@@ -649,23 +649,17 @@
           </image-component>
         </div>
 
-        <div id="sub-section-2-4-2">
-      <h3>2.4.2. Arch-Adaptive Base Design and Classification</h3>
+        <div id="sub-section-3-6">
+      <h3>3.6. Arch-Adaptive Base Design and Classification</h3>
       <p>
-        To ensure effective haptic transmission, consistent contact between the pneumatic layer and the 
-        <b>Medial Longitudinal Arch (MLA)</b> is essential. Following the methodology of 
-        Rogati et al., we utilized 3D scanning technology to capture the plantar 
-        surface in weight-bearing conditions. Digital 3D scanning has been proven 
-        significantly more reliable than traditional manual casting, with an 
-        accuracy (RMSE) of less than 1.6 mm in the arch region alone.
-      </p>
-
-      
-      <p>
-        Based on the morphological analysis derived from these high-resolution scans, 
-        we established a classification standard for the support bases. The height of the 
-        <b>Medial Longitudinal Arch</b> serves as the primary metric for selecting the 
-        appropriate base:
+        "To ensure effective haptic transmission, consistent contact between the pneumatic layer and
+        the Medial Longitudinal Arch (MLA) is critical. We adopted the design parameters established
+        by Rogati et al., who demonstrated that 3D scanning technology provides superior reliability
+        for capturing weight-bearing plantar surfaces compared to traditional manual casting. Their
+        findings report a high accuracy with a Root Mean Square Error (RMSE) of less than 1.6 mm
+        specifically in the arch region. Utilizing these validated morphological benchmarks, we
+        defined our support base classification standard, using the MLA height as the primary metric
+        for selecting the appropriate base.
       </p>
 
       <table-component subtitle="Table 5: Arch Height Classification and Base Design Standards">
@@ -856,13 +850,13 @@
       <div style="background-color: #fff9db; padding: 25px; border-left: 5px solid #fcc419; margin: 30px 0; border-radius: 0 8px 8px 0;">
         <h5 style="margin-top: 0; color: #856404;">Detailed Statistical Interpretation</h5>
         <p>
-          The analysis yielded highly significant results ($p < 0.001$) for most perceptual categories,
+          The analysis yielded highly significant results (p < 0.001) for most perceptual categories,
           rejecting the null hypothesis that stimulus levels have no effect on user perception, with
           the notable exception of Stiffness under static pressure.
         </p>
         <ul style="line-height: 1.7;">
           <li>
-            <b>Static Force Sensitivity:</b> For <b>Flatness</b> and <b>Roughness</b>,
+            <b>Static Force Sensitivity:</b> For <b>Flatness</b>,
             the results indicate that plantar mechanoreceptors are sensitive to incremental pressure
             changes. However, Stiffness (p = 0.106) did not show a statistically significant trend
             across the 1–5 N range, suggesting that users may find it difficult to distinguish material
@@ -1016,76 +1010,37 @@
       <p style="text-align: center; font-style: italic; font-size: 0.9rem;">Figure 43: Unity-rendered environments (Beach, Grass, Gravel) configured for real-time haptic triggering.</p>
     </div>
 
-    <div>
-      <div id="sub-section-5-3">
-        <h3>5.3. Application Scenarios</h3>
-        <p>
-          The proposed wearable foot haptic interface demonstrates strong potential across multiple 
-          application domains beyond gaming and entertainment. By leveraging its dual-mode design, 
-          where <b>Static Force</b> and <b>Vibration</b> act as independent channels, the system 
-          delivers task-specific tactile feedback tailored to complex real-world scenarios.
-        </p>
-      </div>
+    <div id="section-5-3">
+  <h3>5.3. Application Scenarios</h3>
+  <p>
+    Beyond the realms of gaming and entertainment, the proposed wearable foot haptic
+    interface unlocks transformative potential across diverse professional domains by
+    leveraging its sophisticated dual-mode feedback system.
+    By utilizing <b>Static Force</b> and <b>Vibration</b> as independent sensory channels,
+    the device provides task-specific tactile cues that are essential for navigating complex real-world challenges.
+  </p>
+  
+  <p>
+    In high-risk VR training environments—such as those designed for firefighting
+    or military operations—the interface serves as a critical tool for environmental
+    assessment, allowing trainees to distinguish between stable ground and precarious
+    structural supports through subtle variations in arch pressure. This sensory
+    augmentation extends effectively into clinical rehabilitation, where patients
+    with gait disorders or reduced plantar sensitivity can receive physical
+    reinforcement to correct their weight distribution and walking patterns.
+    Furthermore, the technology offers a revolutionary approach to interactive
+    architectural design; it enables clients to "feel" the stiffness of hardwood or
+    the grain of tiles during a virtual walkthrough, facilitating intuitive evaluations
+    of material comfort long before the first stone is laid.
+  </p>
 
-      <div id="sub-section-5-3-1">
-        <h3>5.3.1. Immersive VR Training for High-Risk Environments</h3>
-        <p>
-          In professional VR-based training for firefighting, military operations, or disaster 
-          response, the device serves as a critical tool for environmental assessment. The 
-          <b>Static Force</b> mode accurately simulates ground stiffness, allowing trainees to 
-          distinguish between stable surfaces and weak structural supports through their foot arch. 
-          Simultaneously, the <b>Vibration</b> mode represents surface irregularities such as loose 
-          debris or gravel. These foot-based tactile cues significantly improve situational 
-          awareness, enabling users to rely on physical sensations to make safer decisions in 
-          simulated high-risk scenarios.
-        </p>
-        <div style="display: flex; justify-content: center; margin: 30px 0;">
-        <image-component tag="image" source="assets/Fig_42.png" 
-                        subtitle="Figure 39: Bilateral hardware loop integration showing Arduino Mega 2560 control units, pneumatic trays, and custom arch-adaptive bases." 
-                        width="600px" height="auto">
-        </image-component>
-      </div>
-      </div>
-
-      <div id="sub-section-5-3-2">
-        <h3>5.3.2. Medical Rehabilitation and Sensory Augmentation</h3>
-        <p>
-          The system offers a novel approach to clinical rehabilitation for patients struggling with 
-          gait disorders, balance impairments, or reduced plantar sensitivity. By providing 
-          <b>Static Force</b> feedback, the device offers physical cues that reinforce correct 
-          weight distribution and foot-ground interaction. Furthermore, <b>Vibration</b> feedback 
-          functions as a form of sensory augmentation to guide step timing or correct improper 
-          walking patterns. By targeted stimulation of the medial longitudinal arch, the device 
-          enhances sensorimotor loops, which is essential for improving balance control and 
-          overall walking stability in therapeutic settings.
-        </p>
-        <image-component tag="image" source="assets/Fig_43.png" 
-                subtitle="Figure 40: A participant wearing an HMD navigates the virtual multi-terrain environment while receiving synchronized foot-arch haptic feedback." 
-                width="600px" height="auto"
-                style="margin-top: 10px;">
-        </image-component>
-      </div>
-
-      <div id="sub-section-5-3-3">
-        <h3>5.3.3. Interactive Architectural Design and Material Evaluation</h3>
-        <p>
-          In the field of architecture, this technology enables designers and clients to experience 
-          flooring materials within a virtual walkthrough long before physical construction begins. 
-          The <b>Static Force</b> mode effectively conveys differences in material stiffness, 
-          differentiating between hardwood, concrete, or soft carpet underlays. Meanwhile, the 
-          <b>Vibration</b> mode simulates specific surface textures and micro-irregularities, 
-          such as the grout lines of tiles or rough stone finishes. This allows users to 
-          "feel" virtual spaces intuitively, supporting more informed evaluations of comfort, 
-          usability, and aesthetic material selection.
-        </p>
-        <image-component tag="image" source="assets/Fig_44.png" 
-                subtitle="Figure 41: Close-up of the stance phase, demonstrating the targeted deformation of the pneumatic chambers against the medial longitudinal arch." 
-                width="600px" height="auto"
-                style="margin-top: 10px;">
-        </image-component>
-      </div>
-    </div>
-
+  <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px;">
+    <image-component tag="image" source="assets/Fig_43.png" 
+      subtitle="Figure 44: Patient using vr for dynamic rehabilitation." 
+      width="600px" height="auto">
+    </image-component>
+  </div>
+</div>
 
     <div id="section-header-6">
       <h2>6. Conclusion</h2>

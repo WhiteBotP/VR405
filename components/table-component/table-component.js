@@ -11,9 +11,9 @@ new gridjs.Grid({
 new gridjs.Grid({
   columns: ["Terrain Material", "Mode", "Frequency / Force", "Haptic Rationale"],
   data: [
-    ["Asphalt", "Vibration", "10 – 30 Hz (Low Amp)", "Simulates soft, elastic damping and fine fiber textures."],
+    ["Asphalt", "Vibration", "10 – 30 Hz (Low Amp)", "Replicates micro-impacts of a hard, granular surface."],
     ["Grass", "Vibration", "40 – 70 Hz (Medium Amp)", "Mimics the irregular resistance of grass blades."],
-    ["Yoga Mat / Carpet", "Vibration", "80 – 100 Hz (High Amp)", "Replicates micro-impacts of a hard, granular surface."],
+    ["Yoga Mat / Carpet", "Vibration", "80 – 100 Hz (High Amp)", "Simulates soft, elastic damping and fine fiber textures."],
     ["Gravel (Small Pebbles)", "Static Force", "1 - 2 N (Small Force)", "Uses individual actuators for point intrusion."],
     ["Uneven Rocks", "Static Force", "4 - 5 N (Large Force)", "Simulates large-scale displacement against the MLA."]
   ],
@@ -63,11 +63,11 @@ new gridjs.Grid({
 }).render(document.getElementById("table 4"));
 
 new gridjs.Grid({
-  columns: ["Arch Type", "Arch Height Threshold", "Base Design Strategy", "Clinical Correlation"],
+  columns: ["Arch Type", "Arch Height Threshold", "Base Design Strategy"],
   data: [
-    ["Low Arch (Flat)", "≤ 16 mm", "Minimalist Wedge", "Corresponds to planus morphology with maximum contact area[cite: 112]."],
-    ["Normal Arch", "16 mm - 21 mm", "Standard Contour", "Typical rectus foot proportions for balanced pressure distribution."],
-    ["High Arch (Cavus)", "≥ 26 mm", "Elevated Support", "High-profile base to bridge the deep arch cavity and prevent sensory loss[cite: 112]."]
+    ["Low Arch (Flat)", "≤ 16 mm", "Minimalist Wedge"],
+    ["Normal Arch", "16 mm - 21 mm", "Standard Contour"],
+    ["High Arch (Cavus)", "≥ 26 mm", "Elevated Support"]
   ],
   style: {
     table: {
